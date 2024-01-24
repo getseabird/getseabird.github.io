@@ -1,0 +1,82 @@
+{{ define "main" }}
+  <section class="section container-fluid mt-n3 pb-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-12 text-center">
+        <h1>{{ .Title }}</h1>
+      </div>
+      <div class="col-lg-9 col-xl-10 text-center">
+        <p class="lead">{{ .Params.lead | safeHTML }}</p>
+        <img src="{{- (resources.Get "/images/screenshot.png").Permalink -}}" />
+        <a
+          class="btn btn-primary btn-cta rounded-pill btn-lg my-3 align-middle d-inline-block"
+          href="https://github.com/getseabird/seabird/releases"
+          role="button"
+        >
+          Download Alpha
+          <i class="fa-brands fa-linux"></i>
+          <i class="fa-brands fa-windows"></i>
+        </a>
+
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+  {{ if site.Params.doks.backgroundDots -}}
+    <div class="d-flex justify-content-start">
+      <div class="bg-dots"></div>
+    </div>
+  {{ end -}}
+  {{ if eq $.Site.Language.LanguageName "English" }}
+    <section class="section section-md section-features">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-5">
+            <h2 class="h4">Your cluster, simplified</h2>
+            <p>Get an easy graphical overview of your cluster resources.</p>
+          </div>
+          <div class="col-lg-5">
+            <h2 class="h4">Optimized for GNOME</h2>
+            <p>
+              Seabird is built in GTK and works best with the GNOME desktop on
+              Linux.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <h2 class="h4">Open community</h2>
+            <p>
+              Need help or want to share ideas? Join
+              <a href="https://github.com/getseabird/seabird/discussions"
+                >the community</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+  {{ if
+    site.Params.doks.sectionFooter
+  -}}
+    <section class="section section-md container-fluid bg-light">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-7">
+          <h2 class="mt-2">Start building with Doks today</h2>
+          <a
+            class="btn btn-primary rounded-pill px-4 my-2"
+            href="/docs/{{ if site.Params.doks.docsVersioning }}
+              {{ site.Params.doks.docsVersion }}/
+            {{ end }}prologue/introduction/"
+            role="button"
+            >{{ i18n "get-started" }}</a
+          >
+        </div>
+      </div>
+    </section>
+  {{ end -}}
+{{ end }}
