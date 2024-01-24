@@ -1,6 +1,6 @@
 # Hugo
 title = "Seabird"
-description = "Birds-eye view for Kubernetes"
+description = "Bird's-eye view for Kubernetes"
 images = ["cover.png"]
 
 # mainSections
