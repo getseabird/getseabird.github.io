@@ -16,14 +16,10 @@ jobs:
           fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v4
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: latest
       - name: Build
         run: |
           npm install
-          hugo --minify
+          npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
