@@ -8,7 +8,10 @@ authors:
     image: https://2.gravatar.com/avatar/43f469474de5a70ca41002a6d8abee0cb24fd75e7c9e236bdeb918f78ded6429?size=256
 ---
 
+
 Today, we release Seabird version 0.1. This is the first minor release, and with it we officially enter beta. Here's what's changed since our initial release last month.
+
+*Seabird is a native (GTK) Kubernetes desktop client written in Go. We aim to make working with Kubernetes as simple as possible.*
 
 ### Native Packages
 
