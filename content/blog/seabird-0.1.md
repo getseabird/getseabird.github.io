@@ -1,7 +1,7 @@
 ---
 title: Seabird 0.1
 date: 2024-02-09
-summary: Today, we release Seabird version 0.1.0. This is the first minor release, and we would like to update on what's changed since the very first version released last month.
+summary: Today, we release Seabird version 0.1. This is the first minor release, and with it we officially enter beta. Here's what's changed since our initial release last month.
 authors:
   - name: Jakob Gillich
     link: https://github.com/jgillich
