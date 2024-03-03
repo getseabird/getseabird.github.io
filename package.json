@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "hugo server --disableFastRender -D --port 1313",
+    "dev": "hugo server --disableFastRender --noHTTPCache -D --port 1313",
     "build:css": "npx postcss --config postcss.config.js --env production assets/css/styles.css -o assets/css/compiled/main.css",
     "build": "hugo --gc --minify",
     "tailwind": "tailwindcss -w -i assets/css/style.css -o ./static/style.css"

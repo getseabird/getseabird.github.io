@@ -8,10 +8,9 @@ authors:
     image: https://2.gravatar.com/avatar/43f469474de5a70ca41002a6d8abee0cb24fd75e7c9e236bdeb918f78ded6429?size=256
 ---
 
-
 Today, we release Seabird version 0.1. This is the first minor release, and with it we officially enter beta. Here's what's changed since our initial release last month.
 
-*Seabird is a native (GTK) Kubernetes desktop client written in Go. We aim to make working with Kubernetes as simple as possible.*
+_Seabird is a native (GTK) Kubernetes desktop client written in Go. We aim to make working with Kubernetes as simple as possible._
 
 ### Native Packages
 
@@ -25,7 +24,7 @@ We originally only supported authentication via certificates. In our latest rele
 
 Seabird now includes a terminal, which allows you to exec into containers for debugging purposes.
 
-![Screenshot](/images/seabird-terminal.png)
+![Screenshot](/images/screenshots/0.1-terminal.png)
 
 Note: This feature is not available on Windows yet.
 
@@ -35,13 +34,13 @@ We designed Seabird as a read-only resource explorer since we believe gitops is 
 
 In the Yaml view, you can now right click to enable editing. On save, you are presented with a diff of the changes. Deleting objects is now also possible in the properties view.
 
-<img src="/images/seabird-diff.png" width="500px">
+<img src="/images/screenshots/0.1-diff.png" width="500px">
 
 ### Metrics Server Integration
 
 Seabird now queries [metrics-server](github.com/kubernetes-sigs/metrics-server) for pod metrics, and if either requests or limits are set, displays the current usage percentage.
 
-![Screenshot](/images/seabird-metrics.png)
+![Screenshot](/images/screenshots/0.1-metrics.png)
 
 ### Live Updates
 
