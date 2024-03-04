@@ -17,9 +17,13 @@ markup:
 
 menu:
   main:
+    - identifier: documentation
+      name: Documentation
+      pageRef: /docs
+      weight: 1
     - name: Blog
       pageRef: /blog
-      weight: 1
+      weight: 2
     # - name: About
     #   pageRef: /about
     #   weight: 2
